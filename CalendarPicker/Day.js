@@ -1,12 +1,12 @@
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import PropTypes from 'prop-types';
-import { differenceInDays } from 'date-fns/differenceInDays';
-import { isAfter } from 'date-fns/isAfter';
-import { isBefore } from 'date-fns/isBefore';
-import { isSameDay } from 'date-fns/isSameDay';
-import { isWithinInterval } from 'date-fns/isWithinInterval';
-import { startOfDay } from 'date-fns/startOfDay';
+import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import PropTypes from "prop-types";
+import { differenceInDays } from "date-fns/differenceInDays";
+import { isAfter } from "date-fns/isAfter";
+import { isBefore } from "date-fns/isBefore";
+import { isSameDay } from "date-fns/isSameDay";
+import { isWithinInterval } from "date-fns/isWithinInterval";
+import { startOfDay } from "date-fns/startOfDay";
 
 export default function Day(props) {
   const {
@@ -164,17 +164,10 @@ export default function Day(props) {
             selectedRangeStyle,
             selectedRangeStartStyle,
           ];
-          computedSelectedDayStyle = [
-            ...computedSelectedDayStyle,
-            {
-              backgroundColor: '#0A2B40',             
-            },
-          ];
           selectedDayTextStyle = [
             styles.selectedDayLabel,
             propSelectedDayTextStyle,
             selectedRangeStartTextStyle,
-            { color: '#FFFFFF' },
           ];
         }
 
@@ -184,17 +177,11 @@ export default function Day(props) {
             selectedRangeStyle,
             selectedRangeEndStyle,
           ];
-          computedSelectedDayStyle = [
-            ...computedSelectedDayStyle,
-            {
-              backgroundColor: '#0A2B40',
-            },
-          ];
+
           selectedDayTextStyle = [
             styles.selectedDayLabel,
             propSelectedDayTextStyle,
             selectedRangeEndTextStyle,
-            { color: '#FFFFFF' },
           ];
         }
 
@@ -224,13 +211,10 @@ export default function Day(props) {
           })
         ) {
           computedSelectedDayStyle = [styles.inRangeDay, selectedRangeStyle];
-          computedSelectedDayStyle = [...computedSelectedDayStyle, {
-            backgroundColor: '#BFD7E8', 
-          }];
+
           selectedDayTextStyle = [
             styles.selectedDayLabel,
             propSelectedDayTextStyle,
-            { color: '#023A5C' },
           ];
         }
       }
@@ -244,7 +228,6 @@ export default function Day(props) {
           styles.startDayWrapper,
           selectedRangeStyle,
           selectedRangeStartStyle,
-          { backgroundColor: '#0A2B40' },
         ];
         selectedDayTextStyle = [
           styles.selectedDayLabel,
